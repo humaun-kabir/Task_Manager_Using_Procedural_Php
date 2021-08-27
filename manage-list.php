@@ -4,12 +4,14 @@
 <html>
     <head>
         <title>Task Manager</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css">
     </head>
 
     <body>
+        <div class="wrapper">
         <h1>Task Manager</h1>
 
-        <a href="<?php echo SITEURL; ?>">Home</a>
+        <a class="btn-secondary" href="<?php echo SITEURL; ?>">Home</a>
         <h3>Manage List Page</h3>
 
         <p>
@@ -46,8 +48,8 @@
         </p>
         <!-- Table to display list starts here -->
         <div class="all-lists">
-            <a href="<?php echo SITEURL; ?>add-list.php">Add List</a>
-            <table>
+            <a class="btn-primary" href="<?php echo SITEURL; ?>add-list.php">Add List</a>
+            <table class="tbl-half">
                 <tr>
                     <th>S.N.</th>
                     <th>List Name</th>
@@ -92,8 +94,8 @@
                                         <td><?php echo $sn++;  ?></td>
                                         <td><?php echo $list_name; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>update-list.php?list_id=<?php echo $list_id; ?>">Update</a>
-                                            <a href="<?php echo SITEURL; ?>delete-list.php?list_id=<?php echo $list_id; ?>">Delete</a>
+                                            <a class="btn-update" href="<?php echo SITEURL; ?>update-list.php?list_id=<?php echo $list_id; ?>">Update</a>
+                                            <a class="btn-delete" href="<?php echo SITEURL; ?>delete-list.php?list_id=<?php echo $list_id; ?>">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
@@ -115,5 +117,6 @@
             </table>
         </div>
         <!-- Table to display list starts here -->
+        </div>
     </body>
 </html>

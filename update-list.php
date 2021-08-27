@@ -40,14 +40,16 @@
 <html>
     <head>
         <title>Task Manager</title>
+        <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css">
     </head>
 
     <body>
+        <div class="wrapper">
         <h1>Task Manager</h1>
 
-        <div class="menu">
-            <a href="<?php echo SITEURL ?>">Home</a>
-            <a href="<?php echo SITEURL ?>manage-list.php">Manage Lists</a>
+        <div>
+            <a class="btn-secondary" href="<?php echo SITEURL ?>">Home</a>
+            <a class="btn-secondary" href="<?php echo SITEURL ?>manage-list.php">Manage Lists</a>
         </div>
 
         <h3>Update List Page</h3>
@@ -64,7 +66,7 @@
         </p>
 
         <form action="" method="POST">
-            <table>
+            <table class="tbl-half">
                 <tr>
                     <td>List Name</td>
                     <td><input type="text" name="list_name" value="<?php echo $list_name; ?>" required></td>
@@ -80,10 +82,11 @@
                 </tr>
 
                 <tr>
-                    <td><input type="submit" name="submit" value="Update"></td>
+                    <td><input class="btn-primary btn-lg" type="submit" name="submit" value="Update"></td>
                 </tr>
             </table>
         </form>
+        </div>
     </body>
 </html>
 
